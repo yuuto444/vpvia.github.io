@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* アクアブルー */
+    color: #00796b;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #006064;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: #b2ebf2;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: #004d40;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-button {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-button:hover {
+    text-decoration: underline;
+}

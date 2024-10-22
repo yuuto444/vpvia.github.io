@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体温管理アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>体温管理アプリ</h1>
+        
+        <!-- 体温入力フォーム -->
+        <form action="/" method="POST">
+            <label for="temperature">体温 (℃):</label>
+            <input type="text" id="temperature" name="temperature" placeholder="例: 36.5" required>
+            
+            <label for="date">日付:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">時間:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <button type="submit">追加</button>
+        </form>
+
+        <!-- 体温データの表示 -->
+        <h2>記録された体温:</h2>
+        <ul>
+            {% for record in temperatures %}
+                <li>
+                    {{ record[1] }}℃ - {{ record[2] }} {{ record[3] }} 
+                    <a href="/delete/{{ record[0] }}" class="delete-button">削除</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
